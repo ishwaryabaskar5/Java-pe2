@@ -24,10 +24,9 @@ public class FindFile{
 //	                read a file lines until it is null
 					while ((str=br.readLine())!= null)
 					{
-						System.out.print(str); 					}
+						System.out.print(str);
+					}
 					br.close();
-					
-					
 				}
 			}
 			} catch (IOException e){

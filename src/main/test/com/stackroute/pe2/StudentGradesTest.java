@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class StudentGradesTest {
 	
-	private StudentGrades studentGrades = null;
+	private StudentGrades studentGrades;
 	private PrintStream originalOut = System.out;
 	private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	
@@ -28,19 +28,19 @@ public class StudentGradesTest {
 	}
 	
 	@Test
-	public void validGrades(){
+	public void givenInputShouldReturnAvgMinMaxValues(){
 		studentGrades.calculateGrade(4,78,56,23,67);
 		assertEquals("The average is 56\nThe minimum is 23\nThe maximum is 78",outContent.toString());
 	}
 	
 	@Test
-	public void invalidGrades(){
+	public void givenInputShouldReturnEnterValidGradeErrorMessage(){
 		studentGrades.calculateGrade(4,104,-67,23,78);
 		assertEquals("Please enter valid grades",outContent.toString());
 	}
 	
 	@Test
-	public void missingGrades(){
+	public void givenInputShouldReturnErrorMessage(){
 		studentGrades.calculateGrade(4,90,35,59);
 		assertEquals("You need to enter 4 grades. But you have entered only 3 grades",outContent.toString());
 	}

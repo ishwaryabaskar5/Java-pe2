@@ -8,37 +8,38 @@ import static org.junit.Assert.*;
 
 public class EvenNumberTest {
 	
+	EvenNumber evenNumber;
 	@Before
 	public void setUp(){
-	
+		evenNumber = new EvenNumber();
 	}
 	
 	@After
 	public void tearDown(){
-	
+		evenNumber = null;
 	}
 	
 	@Test
-	public void oddNumber(){
-		boolean result = EvenNumber.isEven(5);
+	public void givenInputshouldreturnFalseForOdd(){
+		boolean result = evenNumber.isEven(5);
 		assertEquals(false,result);
 	}
 	
 	@Test
-	public void eveNumber(){
-		boolean result = EvenNumber.isEven(88);
+	public void givenInputshouldreturnTrueForEven(){
+		boolean result = evenNumber.isEven(88);
 		assertEquals(true,result);
 	}
 	
 	@Test
-	public void negativeNumber(){
-		boolean result = EvenNumber.isEven(-45);
+	public void givenInputshouldreturnFalseForNegativeOdd(){
+		boolean result = evenNumber.isEven(-45);
 		assertEquals(false,result);
 	}
 	
 	@Test
-	public void zero(){
-		boolean result = EvenNumber.isEven(0);
+	public void givenInputshouldreturnFalseForZero(){
+		boolean result = evenNumber.isEven(0);
 		assertEquals(false,result);
 	}
 	

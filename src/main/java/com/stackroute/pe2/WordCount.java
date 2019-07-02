@@ -9,10 +9,10 @@ import java.io.IOException;
 public class WordCount {
 	
 	//	parameter: void, return type: void
-	public void countWords() {
+	public void countWords(String path) {
 	
 //		declaration and initialization
-		File file = new File("/home/ishwarya/IdeaProjects/Java-PE2/src/main/java/com/stackroute/pe2/FileDemo.txt");
+		File file = new File(path);
 		String str = "",word = "";
 		BufferedReader br;
 		int counter = 1;

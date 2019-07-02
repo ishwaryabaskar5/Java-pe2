@@ -26,22 +26,23 @@ public class ReadFileContentTest {
 	public void tearDown(){
 //		Reassigns System.out as a print stream
 		System.setOut(originalOut);
+		readFile = null;
 	}
 	
 	@Test
-	public void readFile(){
+	public void givenInputShouldReturnFileContent(){
 		readFile.readFileContent("/home/ishwarya/IdeaProjects/Java-PE2/src/main/java/com/stackroute/pe2/test.txt");
 		assertEquals("HELLO WORLD", outContent.toString());
 	}
 	
 	@Test
-	public void readEmptyFile(){
+	public void givenInputShouldReturnEmptyString(){
 		readFile.readFileContent("/home/ishwarya/IdeaProjects/Java-PE2/src/main/java/com/stackroute/pe2/empty.txt");
 		assertEquals("", outContent.toString());
 	}
 	
 	@Test
-	public void readUnavailableFile(){
+	public void givenInputShouldReturnIoExceptionMessage(){
 		readFile.readFileContent("/home/ishwarya/IdeaProjects/Java-PE2/src/main/java/com/stackroute/empty.txt");
 		assertEquals("IO Exception", outContent.toString());
 	}

@@ -25,9 +25,12 @@ class MemberClass {
 public class MemberVariableClass extends MemberClass{
 	
 	public String getMemberInfo(String name, int age, double salary){
-	
+		if (name != null) {
 //		calls the super class constructor
-		MemberClass memberClass=new MemberClass(name, age, salary);
-		return "Members Name: "+memberClass.name+"\nMembers Age: "+memberClass.age+"\nMembers Salary: "+memberClass.salary;
+			MemberClass memberClass = new MemberClass(name, age, salary);
+			return "Members Name: " + memberClass.name + "\nMembers Age: " + memberClass.age + "\nMembers Salary: " + memberClass.salary;
+		} else {
+			return "Member Name should not be null";
+		}
 	}
 }
