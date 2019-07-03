@@ -14,19 +14,19 @@ public class FindFile{
 		File folder = new File(path);
 		File[] files = folder.listFiles();
 		String targetFile = "", str = "";
-		BufferedReader br;
+		BufferedReader bufferedReader;
 		
 		try {
-			for (File a: files) {
-				if (a.getName().endsWith(".doc") == true) {
-					targetFile = a.getName();
-					br = new BufferedReader(new FileReader(path+"/"+targetFile));
-//	                read a file lines until it is null
-					while ((str=br.readLine())!= null)
+			for (File file: files) {
+				if (file.getName().endsWith(".doc") == true) {
+					targetFile = file.getName();
+					bufferedReader = new BufferedReader(new FileReader(path+"/"+targetFile));
+//	                read file file lines until it is null
+					while ((str=bufferedReader.readLine())!= null)
 					{
 						System.out.print(str);
 					}
-					br.close();
+					bufferedReader.close();
 				}
 			}
 			} catch (IOException e){

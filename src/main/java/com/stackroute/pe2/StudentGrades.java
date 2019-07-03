@@ -2,36 +2,36 @@ package com.stackroute.pe2;
 
 public class StudentGrades {
 	
-	public void calculateGrade(int n, int ...a){
+	public void calculateGrade(int num, int ...array){
 	
 //		declaration and initialization
 		int avg = 0, sum = 0, temp;
 		
-//		if n not equal to array length
-		if(n != a.length){
-			System.out.print("You need to enter "+n+" grades. But you have entered only "+a.length+" grades");
+//		if num not equal to array length
+		if(num != array.length){
+			System.out.print("You need to enter "+num+" grades. But you have entered only "+array.length+" grades");
 		} else {
-			for(int i = 0; i < n; i++){
-				sum += a[i];    // sum of array
+			for(int i = 0; i < num; i++){
+				sum += array[i];    // sum of array
 			}
 			
 			//sorting
-			for(int i = 0; i < n; i++){
-				if(a[i]>=0 && a[i]<= 100){
-					for (int j = i+1; j < n; j++){
-						if(a[i] > a[j]){
-							temp = a[i];
-							a[i] = a[j];
-							a[j] = temp;
+			for(int i = 0; i < num; i++){
+				if(array[i]>=0 && array[i]<= 100){
+					for (int j = i+1; j < num; j++){
+						if(array[i] > array[j]){
+							temp = array[i];
+							array[i] = array[j];
+							array[j] = temp;
 						}
 					}
-				} else {    // not a valid grade
+				} else {    // not array valid grade
 					System.out.print("Please enter valid grades");
 					return;
 				}
 			}
-			avg = sum / n;      // average calculation
-			System.out.print("The average is "+avg+"\nThe minimum is "+a[0]+"\nThe maximum is "+a[n-1]);
+			avg = sum / num;      // average calculation
+			System.out.print("The average is "+avg+"\nThe minimum is "+array[0]+"\nThe maximum is "+array[num-1]);
 			
 		}
 	}
