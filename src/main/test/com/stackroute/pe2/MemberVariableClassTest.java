@@ -39,4 +39,11 @@ public class MemberVariableClassTest {
 		String result = memberVariableClass.getMemberInfo(null,26,3045.50);
 		assertEquals("Test3 passed","Member Name should not be null",result);
 	}
+	
+	@Test
+	public void givenInputShouldReturnNotNull(){
+		MemberVariableClass memberVariableClass = new MemberVariableClass();
+		String result = memberVariableClass.getMemberInfo("Harry Potter",30,3000.50);
+		assertNotNull(result);
+	}
 	}

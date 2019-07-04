@@ -50,6 +50,12 @@ public class GenerateFactorialTest {
 	}
 	
 	@Test
+	public void givenInputShouldReturnNotNullInIntFact(){
+		generateFactorial.intFactorial();
+		assertNotNull(outContent.toString());
+	}
+	
+	@Test
 	public void givenInputShouldReturnFactorialOfLongType(){
 		generateFactorial.longFactorial();
 		assertEquals("Factorial of 1 is 1\n" +
@@ -73,5 +79,11 @@ public class GenerateFactorialTest {
 				"Factorial of 19 is 121645100408832000\n" +
 				"Factorial of 20 is 2432902008176640000\n" +
 				"Factorial of 21 is out of range\n",outContent.toString());
+	}
+	
+	@Test
+	public void givenInputShouldReturnNotNullInLongFact(){
+		generateFactorial.intFactorial();
+		assertNotNull(outContent.toString());
 	}
 }

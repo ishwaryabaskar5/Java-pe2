@@ -47,4 +47,10 @@ public class ReadFileContentTest {
 		assertEquals("IO Exception", outContent.toString());
 	}
 	
+	@Test
+	public void givenInputShouldReturnNotNull(){
+		readFile.readFileContent("/home/ishwarya/IdeaProjects/Java-PE2/src/main/java/com/stackroute/pe2/test.txt");
+		assertNotNull(outContent.toString());
+	}
+	
 }

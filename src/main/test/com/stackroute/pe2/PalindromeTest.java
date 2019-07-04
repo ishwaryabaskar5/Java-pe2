@@ -47,4 +47,10 @@ public class PalindromeTest {
 		String result = palindrome.checkPalindrome("133.7");
 		assertEquals("Test4 Passed","133.7 is not a palindrome",result);
 	}
+	
+	@Test
+	public void givenInputShouldReturnNull(){
+		String result = palindrome.checkPalindrome(null);
+		assertNull(result);
+	}
 }

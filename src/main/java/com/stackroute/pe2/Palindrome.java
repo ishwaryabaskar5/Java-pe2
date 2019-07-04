@@ -7,6 +7,9 @@ public class Palindrome {
 	public <E> String checkPalindrome(E element){
 	
 //		declaration and initialization
+		if (element == null){
+			return null;
+		}
 		String result = "";
 		String str = ""+element;
 		StringBuilder rev = new StringBuilder();

@@ -22,25 +22,25 @@ public class EvenNumberTest {
 	@Test
 	public void givenInputshouldreturnFalseForOdd(){
 		boolean result = evenNumber.isEven(5);
-		assertEquals(false,result);
+		assertFalse(result);
 	}
 	
 	@Test
 	public void givenInputshouldreturnTrueForEven(){
 		boolean result = evenNumber.isEven(88);
-		assertEquals(true,result);
+		assertTrue(result);
 	}
 	
 	@Test
 	public void givenInputshouldreturnFalseForNegativeOdd(){
 		boolean result = evenNumber.isEven(-45);
-		assertEquals(false,result);
+		assertFalse(result);
 	}
 	
 	@Test
 	public void givenInputshouldreturnFalseForZero(){
 		boolean result = evenNumber.isEven(0);
-		assertEquals(false,result);
+		assertFalse(result);
 	}
 	
 }

@@ -8,6 +8,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class FindFileTest {
 	FindFile findFile;
@@ -30,6 +31,12 @@ public class FindFileTest {
 	public void givenInputShouldReturnContentOfFile(){
 		findFile.findFileByExtension();
 		assertEquals("Hello World", outContent.toString());
+	}
+	
+	@Test
+	public void givenInputShouldReturnNotNull(){
+		findFile.findFileByExtension();
+		assertNotNull(outContent.toString());
 	}
 	
 }
